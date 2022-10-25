@@ -2,10 +2,11 @@
 /**
   *puts2 - prints every character of a string
   *@str: - string character
+  *Return: value 0
   */
 void puts2(char *str)
 {
-	char g;
+	int g = 0;
 
 	for (; str[g] != '\0'; g++)
 	{
