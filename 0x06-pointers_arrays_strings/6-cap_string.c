@@ -7,7 +7,7 @@
 
 char *cap_string(char *str)
 {
-	int k, j;
+	int k;
 
 	k = 0;
 
@@ -15,16 +15,22 @@ char *cap_string(char *str)
 	{
 		while (!(str[k] >= 'a' && str[k] <= 'z'))
 			k++;
-		if (str[k - 1] == ' ' || str[k - 1] == '\t' ||
-				str[k - 1]
-				== '\n' || str[k - 1] == ',' ||
-				str[k - 1] == ';' || str[k - 1] == '.' ||
-				str[k - 1] == '!' || str[k - 1] == '?' ||
-				str[k - 1] == '"' || str[k - 1] == '(' ||
-				str[k - 1] == ')' || str[k - 1] == '{' ||
-				str[k - 1] == '}' || j == 0)
-			str[j] -= 32;
-		j++;
+		if (str[k - 1] == ' ' || 
+		    str[k - 1] == '\t' ||
+		    str[k - 1] == '\n' || 
+		    str[k - 1] == ',' ||
+		    str[k - 1] == ';' || 
+		    str[k - 1] == '.' ||
+		    str[k - 1] == '!' || 
+		    str[k - 1] == '?' ||
+		    str[k - 1] == '"' || 
+		    str[k - 1] == '(' ||
+		    str[k - 1] == ')' || 
+		    str[k - 1] == '{' ||
+		    str[k - 1] == '}' || 
+		    k == 0)
+			str[k] -= 32;
+		k++;
 	}
 	return (str);
 }
