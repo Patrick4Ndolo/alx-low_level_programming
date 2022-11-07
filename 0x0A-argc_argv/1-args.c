@@ -7,11 +7,11 @@
   *Return: - value 0
   */
 
-int main(int argc, char* argv)
+int main(int argc, char *argv[])
 {
-	int i;
+	(void) argv;
 
-	printf("%d\n", argc);
+	printf("%i\n", argc - 1);
 
 	return (0);
 
