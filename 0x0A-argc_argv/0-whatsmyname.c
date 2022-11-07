@@ -3,7 +3,7 @@
 /**
   *main - Entry
   *@argc: - argument1
-  *@argv[]: - second argument
+  *@argv: - second argument
   *Return: - value 0
   */
 
