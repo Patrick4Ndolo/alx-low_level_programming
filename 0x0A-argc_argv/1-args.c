@@ -7,7 +7,7 @@
   *Return: - value 0
   */
 
-int main(int argc, char *argv[argc])
+int main(int argc, char* argv)
 {
 	int i;
 
