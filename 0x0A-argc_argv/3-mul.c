@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 			multy *= atoi(argv[i]);
 		}
 		printf("%d", multy);
+		printf("\n");
+
 	}
 	else if (argc < 2)
 		printf("Error");
