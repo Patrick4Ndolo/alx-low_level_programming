@@ -10,6 +10,7 @@
 int checking_digit(char *str)
 {
 	unsigned int counter;
+
 	counter = 0;
 
 	while (counter < strlen(str))
