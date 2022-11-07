@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
 		{
 			multy *= atoi(argv[i]);
 		}
-		printf("%d\n", multy);
+		printf("%d", multy);
+		printf("\n");
 	}
 	else if (argc < 2)
-		printf("Error\n");
-	return (0);
+		printf("Error");
+	printf("\n");
+	return (1);
 }
 
 
