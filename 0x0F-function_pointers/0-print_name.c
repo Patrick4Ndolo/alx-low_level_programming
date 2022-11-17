@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stddef.h>
 /**
   *print_name - prints name
   *@name: - firt argument
@@ -11,5 +10,4 @@ void print_name(char *name, void (*f)(char *))
 {
 	if (name || f)
 		f(name);
-	return;
 }
