@@ -2,27 +2,31 @@
 
 # Setting variables
 CC = gcc
-SRC = main.c holberton.c
-NAME = holberton
-OBJ = $(SRC:.c=.o) # Substitution References
+SRC = main.c school.c
+NAME = school
+OBJ = $(SRC:%.c=%.o) # Substitution References
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # This is declare to making this rules a prerequisite of the special target
-.PHONY: all clean oclean fclean
+.PHONY: re oclean fclean clean all
 
 # Rule all: Build the holberton executable file
 # 1. Implicity rule to updating .o files
 # 2. Then compile with .o files and executable
-all: m.h $(OBJ)
+all: $(NAME)
+
+$(NAME): m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
+# $@: replace by objective name
+#$(CC) $(OBJ) -o $@
 
 # Deletes all Emacs and Vim temporary files along with the executable
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 # Deletes the object files
 oclean:
-	$(RM) $(OBJ)
+	$(RM) -f $(OBJ)
 
 # Deletes all Emacs and Vim temporary files, the executable,
 # and the object files
